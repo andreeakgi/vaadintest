@@ -27,7 +27,9 @@ public class JustavaadinhelloworldUI extends UI {
 		layout.setMargin(true);
 		setContent(layout);
 
-		Button button = new Button("Click Me, im a button!");
+		Button button = new Button("Click Me!");
+		button.setHeight("100");
+		button.setDescription("im really a button");
 		button.addClickListener(new Button.ClickListener() {
 			public void buttonClick(ClickEvent event) {
 				layout.addComponent(new Label("Thank you for clicking"));
