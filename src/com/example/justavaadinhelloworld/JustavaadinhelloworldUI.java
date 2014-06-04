@@ -25,7 +25,7 @@ public class JustavaadinhelloworldUI extends UI {
 	public static class Servlet extends VaadinServlet {
 	}
 
-	
+	// finally figured out how the path must be set
 	FilesystemContainer docs= new FilesystemContainer(new File("/tmp/docs"));
 	ComboBox docList = new ComboBox("Documents", docs);
 	@Override
