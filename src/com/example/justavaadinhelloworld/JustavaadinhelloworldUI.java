@@ -26,7 +26,7 @@ public class JustavaadinhelloworldUI extends UI {
 	}
 
 	
-	FilesystemContainer docs= new FilesystemContainer(new File("/Downloads"));
+	FilesystemContainer docs= new FilesystemContainer(new File("/tmp/docs"));
 	ComboBox docList = new ComboBox("Documents", docs);
 	@Override
 	protected void init(VaadinRequest request) {
