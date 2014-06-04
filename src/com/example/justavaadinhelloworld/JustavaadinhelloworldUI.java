@@ -18,6 +18,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.ComboBox;
 import com.vaadin.ui.HorizontalSplitPanel;
 import com.vaadin.ui.Label;
+import com.vaadin.ui.Table;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
@@ -32,7 +33,7 @@ public class JustavaadinhelloworldUI extends UI {
 
 	// finally figured out how the path must be set
 	FilesystemContainer docs= new FilesystemContainer(new File("/tmp/docs"));
-	ComboBox docList = new ComboBox("Documents", docs);
+	Table docList = new Table("Documents", docs);
 	Label docView = new Label("",ContentMode.HTML);
 	
 	@Override
@@ -42,6 +43,7 @@ public class JustavaadinhelloworldUI extends UI {
 		setContent(split);
 		split.addComponent(docList);
 		split.addComponent(docView);
+		docList.setSizeFull();
 		
 		docList.addValueChangeListener(new ValueChangeListener() {
 			
@@ -53,6 +55,7 @@ public class JustavaadinhelloworldUI extends UI {
 		});
 		
 		docList.setImmediate(true);
+		docList.setSelectable(true);
 	}
 	
 
